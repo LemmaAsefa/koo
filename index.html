@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lemma Asefa</title>
-    <!-- Google Fonts: Cinzel and Outfit -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Lemma Asefa - Grow With Digitalization</title>
+    <!-- Google Fonts: Cinzel & Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,42 +17,43 @@
         body {
             width: 100vw;
             height: 100vh;
-            background: linear-gradient(135deg, #030712 0%, #0f172a 50%, #022c22 100%);
+            background: radial-gradient(circle at center, #061a14 0%, #030d09 60%, #010504 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
         }
 
-        .wrapper {
+        /* Screen Wrapper Card */
+        .profile-card {
             position: relative;
             width: 100%;
-            max-width: 480px;
+            max-width: 420px;
             height: 100%;
-            max-height: 100vh;
-            background: url('my.jpg') no-repeat center center;
-            background-size: contain;
+            max-height: 880px;
+            background: linear-gradient(180deg, #091c14 0%, #040e0a 50%, #020705 100%);
             display: flex;
-            justify-content: center;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(16, 185, 129, 0.1);
+            overflow: hidden;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            border-radius: 20px;
         }
 
-        /* Header: Profile picture with gold border and compact name */
-        .brand-overlay {
+        /* Header / Profile Badge (Lemma Asefa) */
+        .brand-header {
             position: absolute;
-            top: 3%;
-            left: 50%;
-            transform: translateX(-50%);
-            display: inline-flex;
+            top: 25px;
+            z-index: 20;
+            display: flex;
             align-items: center;
-            background: rgba(15, 23, 42, 0.85);
+            background: rgba(6, 26, 20, 0.85);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1.5px solid rgba(234, 179, 8, 0.6);
+            border: 1.5px solid rgba(234, 179, 8, 0.5);
             border-radius: 50px;
-            padding: 5px 14px 5px 5px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-            animation: headerGlow 3s ease-in-out infinite alternate;
+            padding: 6px 18px 6px 6px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
         }
 
         .profile-pic {
@@ -61,157 +62,219 @@
             border-radius: 50%;
             border: 2px solid #eab308;
             object-fit: cover;
-            margin-right: 10px;
-            box-shadow: 0 0 10px rgba(234, 179, 8, 0.8);
+            margin-right: 12px;
         }
 
-        .brand-overlay h1 {
+        .brand-header h1 {
             font-family: 'Cinzel', serif;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             font-weight: 800;
             background: linear-gradient(135deg, #fef08a 0%, #eab308 50%, #ca8a04 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: 2px;
             text-transform: uppercase;
-            white-space: nowrap;
         }
 
-        @keyframes headerGlow {
-            0% { border-color: rgba(234, 179, 8, 0.4); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
-            100% { border-color: rgba(234, 179, 8, 0.9); box-shadow: 0 10px 30px rgba(234, 179, 8, 0.3); }
-        }
-
-        /* Plant Text Animation Overlay */
-        .plant-text-overlay {
-            position: absolute;
-            bottom: 12%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 95%;
-            text-align: center;
-            pointer-events: none;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        .plant-text-overlay h2 {
-            display: inline-block;
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 800;
-            background: linear-gradient(90deg, #22c55e, #10b981, #facc15, #22c55e);
-            background-size: 300% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
-            animation: biqiltuuFlow 6s linear infinite, waveMotion 2.5s ease-in-out infinite alternate;
-        }
-
-        @keyframes biqiltuuFlow {
-            0% { background-position: 0% center; transform: translateX(-30px); }
-            50% { transform: translateX(0px); }
-            100% { background-position: 200% center; transform: translateX(30px); }
-        }
-
-        @keyframes waveMotion {
-            0% { transform: translateY(0px) rotate(-1deg); }
-            100% { transform: translateY(-8px) rotate(1deg); }
-        }
-
-        /* Social Media Icons (Visible, Clickable & Dripping Effect) */
-        .social-link {
-            position: absolute;
+        /* Main SVG Graphics Stage */
+        .graphics-stage {
+            position: relative;
+            width: 100%;
+            flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 50px;
+        }
+
+        .main-svg-art {
+            width: 100%;
+            height: 100%;
+            max-height: 520px;
+        }
+
+        /* Clickable Social Media Bubbles */
+        .social-bubble {
+            position: absolute;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(4px);
-            border: 1.5px solid rgba(234, 179, 8, 0.5);
-            transition: all 0.3s ease;
-            animation: dripAnimation 4s ease-in-out infinite alternate;
-            cursor: pointer;
+            background: rgba(8, 24, 18, 0.92);
+            border: 1.5px solid rgba(234, 179, 8, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            z-index: 10;
         }
 
-        .social-link svg {
-            width: 65%;
-            height: 65%;
-            object-fit: contain;
+        .social-bubble svg {
+            width: 52%;
+            height: 52%;
+            transition: transform 0.3s ease;
         }
 
-        .social-link:hover {
-            background-color: rgba(234, 179, 8, 0.4);
-            box-shadow: 0 0 20px rgba(234, 179, 8, 0.9);
-            border: 1.5px solid #eab308;
-            transform: scale(1.25);
+        .social-bubble:hover {
+            transform: scale(1.2) translateY(-3px);
+            border-color: #facc15;
+            background: rgba(234, 179, 8, 0.25);
+            box-shadow: 0 0 20px rgba(250, 204, 21, 0.8);
         }
 
-        @keyframes dripAnimation {
-            0% { transform: translateY(0px) scale(1); }
-            50% { transform: translateY(10px) scale(1.05); }
-            100% { transform: translateY(-4px) scale(0.95); }
+        .social-bubble:hover svg {
+            transform: scale(1.1);
         }
 
-        /* Precise Social Media Icon Positioning */
-        .fb { top: 31%; left: 56%; width: 7.5%; height: 7%; animation-delay: 0.1s; }
-        .ig { top: 38%; left: 60%; width: 7.5%; height: 7%; animation-delay: 0.4s; }
-        .tiktok { top: 43%; left: 54%; width: 7.5%; height: 7%; animation-delay: 0.7s; }
-        .linkedin { top: 50%; left: 58%; width: 7.5%; height: 7%; animation-delay: 1.0s; }
-        .youtube { top: 56%; left: 53%; width: 7.5%; height: 7%; animation-delay: 1.3s; }
-        .telegram { top: 55%; left: 60%; width: 7.5%; height: 7%; animation-delay: 1.6s; }
-        .whatsapp { top: 62%; left: 55%; width: 8.5%; height: 7.5%; animation-delay: 1.9s; }
+        /* Coordinates along the pouring flow stream */
+        .bubble-fb { top: 29%; left: 41%; animation: floatItem 3.2s ease-in-out infinite; }
+        .bubble-ig { top: 36%; left: 54%; animation: floatItem 3.6s ease-in-out infinite 0.4s; }
+        .bubble-tk { top: 43%; left: 44%; animation: floatItem 3.0s ease-in-out infinite 0.8s; }
+        .bubble-in { top: 50%; left: 53%; animation: floatItem 3.8s ease-in-out infinite 1.2s; }
+        .bubble-yt { top: 57%; left: 46%; animation: floatItem 3.4s ease-in-out infinite 0.6s; }
+        .bubble-tg { top: 64%; left: 55%; animation: floatItem 3.5s ease-in-out infinite 1.0s; }
+        .bubble-wa { top: 71%; left: 50%; animation: floatItem 3.1s ease-in-out infinite 0.2s; }
 
-        @media (min-width: 768px) {
-            .wrapper {
-                max-width: 520px;
-                max-height: 96vh;
-                border-radius: 20px;
-                border: 2px solid rgba(234, 179, 8, 0.25);
-            }
+        @keyframes floatItem {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* Footer Banner (Grow With Digitalization) */
+        .footer-banner {
+            position: relative;
+            width: 100%;
+            padding: 20px 20px 30px 20px;
+            background: linear-gradient(to top, #020705 70%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 15;
+        }
+
+        .footer-banner h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffffff 30%, #4ade80 70%, #facc15 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.8));
+        }
+
+        .footer-banner p {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* Responsive Mobile Scaling */
+        @media (max-width: 480px) {
+            .profile-card { height: 100vh; max-height: 100vh; border-radius: 0; border: none; }
+            .brand-header { top: 15px; padding: 4px 14px 4px 4px; }
+            .brand-header h1 { font-size: 0.85rem; letter-spacing: 1.5px; }
+            .profile-pic { width: 32px; height: 32px; }
+            .social-bubble { width: 38px; height: 38px; }
+            .footer-banner h2 { font-size: 1.25rem; }
+            .footer-banner p { font-size: 0.75rem; letter-spacing: 3px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="wrapper">
-        <!-- Header: Profile Picture & Compact Name -->
-        <div class="brand-overlay">
+    <div class="profile-card">
+        <!-- Header Badge with Profile Picture & Name -->
+        <div class="brand-header">
             <img src="profile.jpg" alt="Lemma Asefa" class="profile-pic">
             <h1>LEMMA ASEFA</h1>
         </div>
 
-        <!-- Plant Text Overlay -->
-        <div class="plant-text-overlay">
-            <h2>🌱 GROW WITH DIGITALIZATION 🌿</h2>
+        <!-- Graphics Stage: SVG Hand, Cup, Stream & Sprouting Plant -->
+        <div class="graphics-stage">
+            <svg class="main-svg-art" viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Glowing Aura -->
+                <ellipse cx="200" cy="410" rx="70" ry="25" fill="#10b981" fill-opacity="0.15" filter="blur(10px)"/>
+
+                <!-- Soil / Earth Mound -->
+                <path d="M120 430C140 405 260 405 280 430C305 455 280 475 200 475C120 475 95 455 120 430Z" fill="#1e293b"/>
+                <path d="M135 435C150 418 250 418 265 435C285 455 265 470 200 470C135 470 115 455 135 435Z" fill="#0f172a"/>
+                <path d="M150 440C170 425 230 425 250 440C265 455 250 465 200 465C150 465 135 455 150 440Z" fill="#064e3b"/>
+
+                <!-- Sprouting Plant -->
+                <path d="M200 440C200 400 190 360 170 330" stroke="#22c55e" stroke-width="4.5" stroke-linecap="round"/>
+                <!-- Left Leaf -->
+                <path d="M170 360C140 350 115 365 105 385C100 395 110 405 125 405C150 405 165 390 170 360Z" fill="url(#leafGrad1)"/>
+                <!-- Right Leaf -->
+                <path d="M173 375C195 355 220 365 230 385C235 395 225 405 210 405C185 405 175 390 173 375Z" fill="url(#leafGrad2)"/>
+                <!-- Center Bud -->
+                <path d="M170 330C165 315 175 300 185 295C195 300 185 320 170 330Z" fill="#4ade80"/>
+
+                <!-- Flow Stream from Cup to Plant -->
+                <path d="M205 195C195 240 185 285 175 330" stroke="url(#streamGrad)" stroke-width="6" stroke-linecap="round" stroke-dasharray="5 7"/>
+
+                <!-- Hand holding the Cup -->
+                <path d="M230 110C230 110 265 125 280 145C295 165 275 185 255 170C245 162 240 155 235 145Z" fill="#fcd34d" fill-opacity="0.85"/>
+                <path d="M210 90C235 85 265 95 280 120C285 130 280 145 265 140C255 137 245 130 230 130C220 130 215 115 210 90Z" fill="#d97706"/>
+
+                <!-- Ceramic Cup -->
+                <path d="M185 95H255L242 195H198L185 95Z" fill="#f8fafc" stroke="#e2e8f0" stroke-width="3"/>
+                <path d="M255 115H268C282 115 286 138 270 152H255" stroke="#f8fafc" stroke-width="4.5" stroke-linecap="round"/>
+                <ellipse cx="220" cy="95" rx="35" ry="8" fill="#334155"/>
+
+                <!-- Gradients -->
+                <defs>
+                    <linearGradient id="streamGrad" x1="205" y1="195" x2="175" y2="330" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#3b82f6"/>
+                        <stop offset="0.5" stop-color="#ec4899"/>
+                        <stop offset="1" stop-color="#22c55e"/>
+                    </linearGradient>
+                    <linearGradient id="leafGrad1" x1="105" y1="365" x2="170" y2="405" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#4ade80"/>
+                        <stop offset="1" stop-color="#15803d"/>
+                    </linearGradient>
+                    <linearGradient id="leafGrad2" x1="173" y1="365" x2="230" y2="405" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#22c55e"/>
+                        <stop offset="1" stop-color="#166534"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <!-- Clickable Social Media Bubbles -->
+            <a href="https://www.facebook.com/share/1DpVcsq5rq/" target="_blank" class="social-bubble bubble-fb" title="Facebook">
+                <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/qaroodigital_agency" target="_blank" class="social-bubble bubble-ig" title="Instagram">
+                <svg viewBox="0 0 24 24" fill="#E4405F"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@lemma.official5" target="_blank" class="social-bubble bubble-tk" title="TikTok">
+                <svg viewBox="0 0 24 24" fill="#ff0050"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/lemma-asefa-b9814842a" target="_blank" class="social-bubble bubble-in" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@lemmaasefa-09asefalemma.official" target="_blank" class="social-bubble bubble-yt" title="YouTube">
+                <svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://t.me/LemmaA9" target="_blank" class="social-bubble bubble-tg" title="Telegram">
+                <svg viewBox="0 0 24 24" fill="#24A1DE"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.21-3.05 5.55-5.018c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.535-.195 1.006.132.832.943z"/></svg>
+            </a>
+            <a href="https://wa.me/251909506573" target="_blank" class="social-bubble bubble-wa" title="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="#25D366"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </a>
         </div>
 
-        <!-- Social Media Links (Clickable Icons) -->
-        <a href="https://www.facebook.com/share/1DpVcsq5rq/" target="_blank" class="social-link fb" title="Facebook">
-            <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/qaroodigital_agency?stkn=MXB6dHB6czhucGJuNQ==" target="_blank" class="social-link ig" title="Instagram">
-            <svg viewBox="0 0 24 24" fill="#E4405F"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@lemma.official5?_r=1&_t=ZS-99lKBBG9gcX" target="_blank" class="social-link tiktok" title="TikTok">
-            <svg viewBox="0 0 24 24" fill="#ff0050"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/lemma-asefa-b9814842a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-link linkedin" title="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@lemmaasefa-09asefalemma.official" target="_blank" class="social-link youtube" title="YouTube">
-            <svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </a>
-        <a href="https://t.me/LemmaA9" target="_blank" class="social-link telegram" title="Telegram">
-            <svg viewBox="0 0 24 24" fill="#24A1DE"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.21-3.05 5.55-5.018c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.535-.195 1.006.132.832.943z"/></svg>
-        </a>
-        <a href="https://wa.me/251909506573" target="_blank" class="social-link whatsapp" title="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="#25D366"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        </a>
+        <!-- Footer Banner (Grow With Digitalization) -->
+        <div class="footer-banner">
+            <h2>GROW WITH</h2>
+            <p>DIGITALIZATION</p>
+        </div>
     </div>
 
 </body>

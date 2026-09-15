@@ -17,48 +17,49 @@
         body {
             width: 100vw;
             height: 100vh;
-            background: radial-gradient(circle at center, #061a14 0%, #030d09 60%, #010504 100%);
+            background: radial-gradient(circle at center, #0f2d22 0%, #061912 50%, #020b07 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
         }
 
-        /* Screen Wrapper Card */
+        /* Screen Wrapper Card with Magical Nature Backdrop */
         .profile-card {
             position: relative;
             width: 100%;
-            max-width: 420px;
+            max-width: 440px;
             height: 100%;
-            max-height: 880px;
-            background: linear-gradient(180deg, #091c14 0%, #040e0a 50%, #020705 100%);
+            max-height: 900px;
+            background: linear-gradient(180deg, rgba(8, 38, 27, 0.95) 0%, rgba(4, 20, 14, 0.98) 50%, rgba(2, 10, 7, 1) 100%),
+                        radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.15) 0%, transparent 60%);
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(16, 185, 129, 0.1);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.95), 0 0 50px rgba(34, 197, 94, 0.15);
             overflow: hidden;
-            border: 1px solid rgba(234, 179, 8, 0.3);
-            border-radius: 20px;
+            border: 1px solid rgba(234, 179, 8, 0.35);
+            border-radius: 24px;
         }
 
-        /* Header / Profile Badge (Lemma Asefa) */
+        /* Header / Profile Badge */
         .brand-header {
             position: absolute;
-            top: 25px;
-            z-index: 20;
+            top: 22px;
+            z-index: 25;
             display: flex;
             align-items: center;
-            background: rgba(6, 26, 20, 0.85);
+            background: rgba(6, 26, 20, 0.9);
             backdrop-filter: blur(12px);
-            border: 1.5px solid rgba(234, 179, 8, 0.5);
+            border: 1.5px solid rgba(234, 179, 8, 0.6);
             border-radius: 50px;
-            padding: 6px 18px 6px 6px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+            padding: 6px 20px 6px 6px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
         }
 
         .profile-pic {
-            width: 38px;
-            height: 38px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             border: 2px solid #eab308;
             object-fit: cover;
@@ -76,7 +77,7 @@
             text-transform: uppercase;
         }
 
-        /* Main SVG Graphics Stage */
+        /* Main Graphics Stage */
         .graphics-stage {
             position: relative;
             width: 100%;
@@ -84,13 +85,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 50px;
+            margin-top: 45px;
         }
 
         .main-svg-art {
             width: 100%;
             height: 100%;
-            max-height: 520px;
+            max-height: 560px;
         }
 
         /* Clickable Social Media Bubbles */
@@ -99,15 +100,15 @@
             width: 44px;
             height: 44px;
             border-radius: 50%;
-            background: rgba(8, 24, 18, 0.92);
-            border: 1.5px solid rgba(234, 179, 8, 0.6);
+            background: rgba(6, 22, 16, 0.95);
+            border: 1.5px solid rgba(234, 179, 8, 0.65);
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
-            z-index: 10;
+            z-index: 20;
         }
 
         .social-bubble svg {
@@ -117,41 +118,41 @@
         }
 
         .social-bubble:hover {
-            transform: scale(1.2) translateY(-3px);
+            transform: scale(1.25) translateY(-3px);
             border-color: #facc15;
-            background: rgba(234, 179, 8, 0.25);
-            box-shadow: 0 0 20px rgba(250, 204, 21, 0.8);
+            background: rgba(234, 179, 8, 0.3);
+            box-shadow: 0 0 25px rgba(250, 204, 21, 0.9);
         }
 
         .social-bubble:hover svg {
             transform: scale(1.1);
         }
 
-        /* Coordinates along the pouring flow stream */
-        .bubble-fb { top: 29%; left: 41%; animation: floatItem 3.2s ease-in-out infinite; }
-        .bubble-ig { top: 36%; left: 54%; animation: floatItem 3.6s ease-in-out infinite 0.4s; }
-        .bubble-tk { top: 43%; left: 44%; animation: floatItem 3.0s ease-in-out infinite 0.8s; }
-        .bubble-in { top: 50%; left: 53%; animation: floatItem 3.8s ease-in-out infinite 1.2s; }
-        .bubble-yt { top: 57%; left: 46%; animation: floatItem 3.4s ease-in-out infinite 0.6s; }
-        .bubble-tg { top: 64%; left: 55%; animation: floatItem 3.5s ease-in-out infinite 1.0s; }
-        .bubble-wa { top: 71%; left: 50%; animation: floatItem 3.1s ease-in-out infinite 0.2s; }
+        /* Precise coordinates along the natural pouring stream */
+        .bubble-fb { top: 30%; left: 39%; animation: floatItem 3.2s ease-in-out infinite; }
+        .bubble-ig { top: 37%; left: 55%; animation: floatItem 3.6s ease-in-out infinite 0.4s; }
+        .bubble-tk { top: 44%; left: 42%; animation: floatItem 3.0s ease-in-out infinite 0.8s; }
+        .bubble-in { top: 51%; left: 54%; animation: floatItem 3.8s ease-in-out infinite 1.2s; }
+        .bubble-yt { top: 58%; left: 44%; animation: floatItem 3.4s ease-in-out infinite 0.6s; }
+        .bubble-tg { top: 65%; left: 56%; animation: floatItem 3.5s ease-in-out infinite 1.0s; }
+        .bubble-wa { top: 72%; left: 49%; animation: floatItem 3.1s ease-in-out infinite 0.2s; }
 
         @keyframes floatItem {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-6px); }
         }
 
-        /* Footer Banner (Grow With Digitalization) */
+        /* Footer Banner */
         .footer-banner {
             position: relative;
             width: 100%;
-            padding: 20px 20px 30px 20px;
-            background: linear-gradient(to top, #020705 70%, transparent 100%);
+            padding: 15px 20px 25px 20px;
+            background: linear-gradient(to top, rgba(2, 10, 7, 0.95) 70%, transparent 100%);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            z-index: 15;
+            z-index: 20;
         }
 
         .footer-banner h2 {
@@ -180,7 +181,7 @@
             .profile-card { height: 100vh; max-height: 100vh; border-radius: 0; border: none; }
             .brand-header { top: 15px; padding: 4px 14px 4px 4px; }
             .brand-header h1 { font-size: 0.85rem; letter-spacing: 1.5px; }
-            .profile-pic { width: 32px; height: 32px; }
+            .profile-pic { width: 34px; height: 34px; }
             .social-bubble { width: 38px; height: 38px; }
             .footer-banner h2 { font-size: 1.25rem; }
             .footer-banner p { font-size: 0.75rem; letter-spacing: 3px; }
@@ -190,58 +191,98 @@
 <body>
 
     <div class="profile-card">
-        <!-- Header Badge with Profile Picture & Name -->
+        <!-- Header Badge -->
         <div class="brand-header">
             <img src="profile.jpg" alt="Lemma Asefa" class="profile-pic">
             <h1>LEMMA ASEFA</h1>
         </div>
 
-        <!-- Graphics Stage: SVG Hand, Cup, Stream & Sprouting Plant -->
+        <!-- Graphics Stage: SVG Vector Artwork -->
         <div class="graphics-stage">
-            <svg class="main-svg-art" viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Glowing Aura -->
-                <ellipse cx="200" cy="410" rx="70" ry="25" fill="#10b981" fill-opacity="0.15" filter="blur(10px)"/>
+            <svg class="main-svg-art" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Magical Garden Background Glow & Nature Elements -->
+                <circle cx="200" cy="250" r="180" fill="url(#bgGlow)" />
+                
+                <!-- Floating Magical Sparkles / Fireflies -->
+                <circle cx="90" cy="180" r="2.5" fill="#fde047" opacity="0.8" />
+                <circle cx="310" cy="140" r="3" fill="#4ade80" opacity="0.9" />
+                <circle cx="330" cy="300" r="2" fill="#fde047" opacity="0.7" />
+                <circle cx="70" cy="360" r="2.5" fill="#38bdf8" opacity="0.8" />
+                <circle cx="200" cy="90" r="2" fill="#fde047" opacity="0.9" />
 
-                <!-- Soil / Earth Mound -->
-                <path d="M120 430C140 405 260 405 280 430C305 455 280 475 200 475C120 475 95 455 120 430Z" fill="#1e293b"/>
-                <path d="M135 435C150 418 250 418 265 435C285 455 265 470 200 470C135 470 115 455 135 435Z" fill="#0f172a"/>
-                <path d="M150 440C170 425 230 425 250 440C265 455 250 465 200 465C150 465 135 455 150 440Z" fill="#064e3b"/>
+                <!-- Rich Realistic Soil Mound at Bottom -->
+                <ellipse cx="200" cy="455" rx="95" ry="32" fill="#091c14" />
+                <path d="M110 455C110 435 290 435 290 455C290 478 110 478 110 455Z" fill="#1b382b" />
+                <path d="M125 458C135 442 265 442 275 458C285 472 115 472 125 458Z" fill="#102e21" />
+                <!-- Soil texture highlights -->
+                <ellipse cx="170" cy="460" rx="35" ry="6" fill="#0b2218" />
+                <ellipse cx="230" cy="458" rx="25" ry="5" fill="#0b2218" />
 
-                <!-- Sprouting Plant -->
-                <path d="M200 440C200 400 190 360 170 330" stroke="#22c55e" stroke-width="4.5" stroke-linecap="round"/>
-                <!-- Left Leaf -->
-                <path d="M170 360C140 350 115 365 105 385C100 395 110 405 125 405C150 405 165 390 170 360Z" fill="url(#leafGrad1)"/>
-                <!-- Right Leaf -->
-                <path d="M173 375C195 355 220 365 230 385C235 395 225 405 210 405C185 405 175 390 173 375Z" fill="url(#leafGrad2)"/>
-                <!-- Center Bud -->
-                <path d="M170 330C165 315 175 300 185 295C195 300 185 320 170 330Z" fill="#4ade80"/>
+                <!-- Sprouting Realistic Plant (Biqiltuu Kichuu Baay'ee Miidhagdu) -->
+                <path d="M200 450C200 400 185 350 170 315" stroke="url(#stemGrad)" stroke-width="5" stroke-linecap="round"/>
+                
+                <!-- Left Leaf with realistic veins -->
+                <path d="M172 360C140 345 110 365 98 390C92 402 105 415 125 412C150 408 168 390 172 360Z" fill="url(#leafGrad1)"/>
+                <path d="M172 360C155 362 135 375 115 400" stroke="#86efac" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
 
-                <!-- Flow Stream from Cup to Plant -->
-                <path d="M205 195C195 240 185 285 175 330" stroke="url(#streamGrad)" stroke-width="6" stroke-linecap="round" stroke-dasharray="5 7"/>
+                <!-- Right Leaf with realistic veins -->
+                <path d="M175 375C205 355 235 370 248 395C254 408 240 420 220 417C195 413 179 395 175 375Z" fill="url(#leafGrad2)"/>
+                <path d="M175 375C192 378 212 390 232 412" stroke="#86efac" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
 
-                <!-- Hand holding the Cup -->
-                <path d="M230 110C230 110 265 125 280 145C295 165 275 185 255 170C245 162 240 155 235 145Z" fill="#fcd34d" fill-opacity="0.85"/>
-                <path d="M210 90C235 85 265 95 280 120C285 130 280 145 265 140C255 137 245 130 230 130C220 130 215 115 210 90Z" fill="#d97706"/>
+                <!-- Center Top Tender Bud -->
+                <path d="M170 315C163 298 175 282 188 276C198 282 188 302 170 315Z" fill="url(#budGrad)"/>
+                <path d="M170 315C175 305 180 295 188 276" stroke="#bbf7d0" stroke-width="1.5" stroke-linecap="round"/>
 
-                <!-- Ceramic Cup -->
-                <path d="M185 95H255L242 195H198L185 95Z" fill="#f8fafc" stroke="#e2e8f0" stroke-width="3"/>
-                <path d="M255 115H268C282 115 286 138 270 152H255" stroke="#f8fafc" stroke-width="4.5" stroke-linecap="round"/>
-                <ellipse cx="220" cy="95" rx="35" ry="8" fill="#334155"/>
+                <!-- Natural Pouring Liquid Stream (Correctly tilted from cup to plant) -->
+                <path d="M210 190C195 230 185 270 172 315" stroke="url(#streamGrad)" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="6 8"/>
+                <!-- Splashing Water Droplets near plant base -->
+                <circle cx="170" cy="325" r="3" fill="#60a5fa" opacity="0.9"/>
+                <circle cx="178" cy="335" r="2" fill="#38bdf8" opacity="0.8"/>
+                <circle cx="163" cy="338" r="2.5" fill="#4ade80" opacity="0.9"/>
 
-                <!-- Gradients -->
+                <!-- Human Hand Naturally Holding the Tilted Cup -->
+                <!-- Fingers wrapping around -->
+                <path d="M230 115C225 125 240 155 260 165C275 172 295 155 280 135C270 122 255 115 245 110Z" fill="#fcd34d" fill-opacity="0.9"/>
+                <path d="M210 95C230 90 260 100 278 122C285 132 278 148 262 142C250 138 235 130 220 128C212 128 208 115 210 95Z" fill="#d97706"/>
+
+                <!-- Perfectly Tilted Ceramic Cup/Mug -->
+                <g transform="translate(190, 80) rotate(18)">
+                    <!-- Cup Body -->
+                    <path d="M0 15H65L52 115H13L0 15Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2.5"/>
+                    <!-- Cup Handle -->
+                    <path d="M55 35H68C82 35 86 58 72 72H55" stroke="#f8fafc" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+                    <!-- Tilted Liquid Surface inside cup -->
+                    <ellipse cx="32.5" cy="15" rx="32.5" ry="9" fill="#1e293b"/>
+                    <ellipse cx="32.5" cy="15" rx="28" ry="6.5" fill="#0f172a"/>
+                </g>
+
+                <!-- Gradients Definition -->
                 <defs>
-                    <linearGradient id="streamGrad" x1="205" y1="195" x2="175" y2="330" gradientUnits="userSpaceOnUse">
+                    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#10b981" stop-opacity="0.18"/>
+                        <stop offset="60%" stop-color="#065f46" stop-opacity="0.08"/>
+                        <stop offset="100%" stop-color="#020b07" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="stemGrad" x1="200" y1="450" x2="170" y2="315" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#15803d"/>
+                        <stop offset="1" stop-color="#4ade80"/>
+                    </linearGradient>
+                    <linearGradient id="budGrad" x1="170" y1="315" x2="188" y2="276" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#4ade80"/>
+                        <stop offset="1" stop-color="#bbf7d0"/>
+                    </linearGradient>
+                    <linearGradient id="streamGrad" x1="210" y1="190" x2="172" y2="315" gradientUnits="userSpaceOnUse">
                         <stop stop-color="#3b82f6"/>
                         <stop offset="0.5" stop-color="#ec4899"/>
                         <stop offset="1" stop-color="#22c55e"/>
                     </linearGradient>
-                    <linearGradient id="leafGrad1" x1="105" y1="365" x2="170" y2="405" gradientUnits="userSpaceOnUse">
+                    <linearGradient id="leafGrad1" x1="98" y1="365" x2="172" y2="412" gradientUnits="userSpaceOnUse">
                         <stop stop-color="#4ade80"/>
-                        <stop offset="1" stop-color="#15803d"/>
-                    </linearGradient>
-                    <linearGradient id="leafGrad2" x1="173" y1="365" x2="230" y2="405" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#22c55e"/>
                         <stop offset="1" stop-color="#166534"/>
+                    </linearGradient>
+                    <linearGradient id="leafGrad2" x1="175" y1="370" x2="248" y2="417" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#22c55e"/>
+                        <stop offset="1" stop-color="#14532d"/>
                     </linearGradient>
                 </defs>
             </svg>
@@ -270,10 +311,10 @@
             </a>
         </div>
 
-        <!-- Footer Banner (Grow With Digitalization) -->
+        <!-- Footer Banner -->
         <div class="footer-banner">
-            <h2>GROW WITH</h2>
-            <p>DIGITALIZATION</p>
+            <h2>GROW WITH DIGITALIZATION </h2>
+            <p></p>
         </div>
     </div>
 

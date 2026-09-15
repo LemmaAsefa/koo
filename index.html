@@ -37,32 +37,43 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
         }
 
-        /* Header: LEMMA ASEFA qofa qubee gurguddaan (Gold & Glassmorphism) */
+        /* 3. Header: Suuraa bitaa irratti marfame (Gold) fi Maqaa Lemma Asefa */
         .brand-overlay {
             position: absolute;
             top: 3%;
             left: 50%;
             transform: translateX(-50%);
-            width: 85%;
-            text-align: center;
+            width: 90%;
+            display: flex;
+            align-items: center;
             background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1.5px solid rgba(234, 179, 8, 0.6);
-            border-radius: 14px;
-            padding: 12px;
+            border-radius: 50px;
+            padding: 8px 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
             animation: headerGlow 3s ease-in-out infinite alternate;
         }
 
+        .profile-pic {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid #eab308;
+            object-fit: cover;
+            margin-right: 12px;
+            box-shadow: 0 0 10px rgba(234, 179, 8, 0.8);
+        }
+
         .brand-overlay h1 {
             font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 800;
             background: linear-gradient(135deg, #fef08a 0%, #eab308 50%, #ca8a04 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
         }
 
@@ -71,7 +82,7 @@
             100% { border-color: rgba(234, 179, 8, 0.9); box-shadow: 0 10px 30px rgba(234, 179, 8, 0.3); }
         }
 
-        /* Biqiltuu lafaa ol biqilaa jiru fakkaatee bitaa gara mirgaatti sossochu */
+        /* 1. Text: Grow with digitalization qofa */
         .plant-text-overlay {
             position: absolute;
             bottom: 12%;
@@ -110,20 +121,23 @@
             100% { transform: translateY(-8px) rotate(1deg); }
         }
 
-        /* Social Media Links - Gad dhangala'anii akka sossochan (Dripping & Floating Effect) */
+        /* 2 & 4. Social Media Icons (Invisible / Clickable & Dripping animation) */
         .social-link {
             position: absolute;
             display: block;
             border-radius: 50%;
+            background: transparent; /* Iconiin akka hin mul'anne godhameera, garuu click ni taasisa */
+            border: none;
             transition: all 0.3s ease;
             animation: dripAnimation 4s ease-in-out infinite alternate;
+            cursor: pointer;
         }
 
         .social-link:hover {
-            background-color: rgba(234, 179, 8, 0.4);
-            box-shadow: 0 0 25px rgba(234, 179, 8, 0.9);
-            border: 2px solid #eab308;
-            transform: scale(1.2);
+            background-color: rgba(234, 179, 8, 0.25);
+            box-shadow: 0 0 20px rgba(234, 179, 8, 0.7);
+            border: 1.5px solid #eab308;
+            transform: scale(1.15);
         }
 
         @keyframes dripAnimation {
@@ -132,7 +146,7 @@
             100% { transform: translateY(-5px) scale(0.95); }
         }
 
-        /* Safartoota iconootaa hundaaf (Telegram dabaluun iddoonsaa qindaa'era) */
+        /* Iddoo iconootaa suuraa finchaalaa waliin sirriitti wal simsiisuu */
         .fb { top: 43%; left: 63%; width: 9%; height: 8%; animation-delay: 0.1s; }
         .ig { top: 52%; left: 67%; width: 9%; height: 8%; animation-delay: 0.5s; }
         .tiktok { top: 59%; left: 61%; width: 9%; height: 8%; animation-delay: 0.9s; }
@@ -154,17 +168,18 @@
 <body>
 
     <div class="wrapper">
-        <!-- Header: LEMMA ASEFA Qofa -->
+        <!-- Header: Suuraa profile.jpg (bitaarratti marfame) fi Maqaa -->
         <div class="brand-overlay">
+            <img src="profile.jpg" alt="Lemma Asefa" class="profile-pic">
             <h1>LEMMA ASEFA</h1>
         </div>
 
-        <!-- Biqiltuu lafaa ol biqilaa fi bitaa gara mirgaatti socho'u -->
+        <!-- Plant Text Overlay -->
         <div class="plant-text-overlay">
             <h2>🌱 GROW WITH DIGITALIZATION 🌿</h2>
         </div>
 
-        <!-- Social Media Links (Dripping/Sossochoo) -->
+        <!-- Social Media Links (Invisible, Clickable & Dripping) -->
         <a href="https://www.facebook.com/share/1DpVcsq5rq/" target="_blank" class="social-link fb" title="Facebook"></a>
         <a href="https://www.instagram.com/qaroodigital_agency?stkn=MXB6dHB6czhucGJuNQ==" target="_blank" class="social-link ig" title="Instagram"></a>
         <a href="https://www.tiktok.com/@lemma.official5?_r=1&_t=ZS-99lKBBG9gcX" target="_blank" class="social-link tiktok" title="TikTok"></a>

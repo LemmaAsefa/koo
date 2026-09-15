@@ -20,7 +20,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Graphic Container: Warm, soft-focus background inspired by your design */
+        /* Graphic Poster Container */
         .promo-graphic {
             position: relative;
             width: 600px;
@@ -28,140 +28,186 @@
             background: linear-gradient(135deg, #fceade 0%, #f4d0ba 100%);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 35px 40px;
+            padding: 30px;
             text-align: center;
         }
 
-        /* Ambient soft-focus background blur effect */
+        /* Ambient soft-focus background highlight */
         .promo-graphic::before {
             content: '';
             position: absolute;
-            top: -40px;
-            left: -40px;
-            width: 280px;
-            height: 280px;
-            background: rgba(255, 255, 255, 0.5);
+            top: -50px;
+            left: -50px;
+            width: 320px;
+            height: 320px;
+            background: rgba(255, 255, 255, 0.6);
             border-radius: 50%;
-            filter: blur(45px);
+            filter: blur(50px);
             z-index: 1;
         }
 
-        /* Visual Stage */
-        .visual-stage {
+        /* Visual Illustration Canvas Area */
+        .illustration-stage {
             position: relative;
             z-index: 2;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
+            justify-content: center;
         }
 
-        /* The Watering Cup Section */
-        .element-cup-container {
-            align-self: flex-start;
-            margin-left: 10px;
-            background: rgba(255, 255, 255, 0.85);
-            padding: 10px 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-left: 4px solid #b58352;
-            text-align: left;
-            max-width: 280px;
+        /* Cup & Hand Mockup Styles */
+        .cup-container {
+            position: absolute;
+            top: 40px;
+            left: 80px;
+            transform: rotate(-25deg);
+            z-index: 3;
         }
 
-        .element-title {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #b58352;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 2px;
+        .ceramic-cup {
+            width: 90px;
+            height: 60px;
+            background: #ffffff;
+            border-radius: 0 0 45px 45px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            position: relative;
+            border: 2px solid #e0e0e0;
         }
 
-        .element-desc {
-            font-size: 0.75rem;
-            color: #4a3525;
-            line-height: 1.3;
+        .cup-handle {
+            position: absolute;
+            right: -22px;
+            top: 10px;
+            width: 25px;
+            height: 35px;
+            border: 5px solid #ffffff;
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            box-shadow: 3px 5px 10px rgba(0,0,0,0.1);
         }
 
-        /* Clickable Social Media Icon Blocks Stream */
-        .element-icons-stream {
+        /* Falling Social Media Icons Stream */
+        .stream-icons {
+            position: absolute;
+            top: 110px;
+            left: 170px;
             display: flex;
+            flex-direction: column;
             gap: 12px;
-            margin: 10px 0;
+            z-index: 3;
         }
 
-        .icon-block {
-            width: 45px;
-            height: 45px;
+        .social-icon-block {
+            width: 40px;
+            height: 40px;
             background: #ffffff;
             border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-            font-size: 0.8rem;
-            font-weight: bold;
+            font-weight: 800;
+            font-size: 0.85rem;
             color: #b58352;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
             border: 1px solid rgba(181, 131, 82, 0.3);
             text-decoration: none;
-            transition: transform 0.2s ease, background 0.2s ease;
+            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
         }
 
-        .icon-block:hover {
-            transform: translateY(-4px);
+        .social-icon-block:hover {
+            transform: scale(1.15);
             background: #b58352;
             color: #ffffff;
         }
 
-        /* The Sprouting Plant Section */
-        .element-plant-container {
-            align-self: flex-end;
-            margin-right: 10px;
-            background: rgba(255, 255, 255, 0.85);
-            padding: 10px 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-right: 4px solid #4e9f3d;
-            text-align: right;
-            max-width: 280px;
+        .icon-fb { transform: translate(0px, 0px) rotate(-10deg); }
+        .icon-ig { transform: translate(15px, 15px) rotate(5deg); }
+        .icon-in { transform: translate(30px, 30px) rotate(-5deg); }
+        .icon-tt { transform: translate(45px, 45px) rotate(15deg); }
+
+        /* Rich Soil & Sprouting Plant Area at the Bottom */
+        .soil-and-plant {
+            position: absolute;
+            bottom: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 3;
         }
 
-        .element-title-plant {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #2e6930;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 2px;
+        .soil-mound {
+            width: 180px;
+            height: 35px;
+            background: linear-gradient(to top, #3d2817, #5c4033);
+            border-radius: 50% 50% 0 0;
+            position: absolute;
+            bottom: 0;
+            box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+        }
+
+        .plant-stem {
+            position: absolute;
+            bottom: 30px;
+            width: 6px;
+            height: 60px;
+            background: #4e9f3d;
+            border-radius: 3px;
+        }
+
+        .leaf {
+            position: absolute;
+            width: 35px;
+            height: 20px;
+            background: #588157;
+            border-radius: 0 50% 0 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .leaf-left {
+            left: -32px;
+            bottom: 50px;
+            transform: rotate(-30deg);
+        }
+
+        .leaf-right {
+            right: -32px;
+            bottom: 70px;
+            transform: rotate(30deg) scaleX(-1);
+        }
+
+        .leaf-top {
+            left: -18px;
+            bottom: 85px;
+            transform: rotate(-15deg);
         }
 
         /* Text and Branding Footer */
         .branding-footer {
             position: relative;
-            z-index: 2;
-            border-top: 2px solid rgba(181, 131, 82, 0.25);
+            z-index: 4;
+            border-top: 2px solid rgba(181, 131, 82, 0.3);
             padding-top: 15px;
         }
 
         .main-slogan {
             font-size: 1.65rem;
             font-weight: 800;
-            color: #d4af37; /* Bold, gold lettering */
+            color: #d4af37; /* Gold lettering */
             letter-spacing: 1.5px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-            margin-bottom: 6px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            margin-bottom: 5px;
         }
 
         .portfolio-owner {
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             color: #4a3525;
             text-transform: uppercase;
             letter-spacing: 2.5px;
@@ -171,29 +217,33 @@
 <body>
 
     <div class="promo-graphic">
-        <!-- Visual Elements Stage -->
-        <div class="visual-stage">
+        
+        <!-- Illustration Visual Canvas -->
+        <div class="illustration-stage">
             
-            <!-- 1. The Watering Cup -->
-            <div class="element-cup-container">
-                <div class="element-title">The Watering Cup</div>
-                <div class="element-desc">Hand tilting a white ceramic cup, pouring marketing strategies into the business.</div>
+            <!-- 1. The White Ceramic Cup Tilting -->
+            <div class="cup-container">
+                <div class="ceramic-cup">
+                    <div class="cup-handle"></div>
+                </div>
             </div>
 
-            <!-- 2. Clickable Social Media Icon Blocks (As requested, fully linked!) -->
-            <div class="element-icons-stream">
-                <!-- Bakka "https://your-link..." jedhutti linkii kee galchi -->
-                <a href="https://facebook.com" target="_blank" class="icon-block" title="Facebook">FB</a>
-                <a href="https://instagram.com" target="_blank" class="icon-block" title="Instagram">IG</a>
-                <a href="https://linkedin.com" target="_blank" class="icon-block" title="LinkedIn">IN</a>
-                <a href="https://tiktok.com" target="_blank" class="icon-block" title="TikTok">TT</a>
-                <a href="https://whatsapp.com" target="_blank" class="icon-block" title="WhatsApp">WA</a>
+            <!-- 2. Falling Clickable Social Media Icons Stream -->
+            <div class="stream-icons">
+                <a href="https://facebook.com" target="_blank" class="social-icon-block icon-fb" title="Facebook">FB</a>
+                <a href="https://instagram.com" target="_blank" class="social-icon-block icon-ig" title="Instagram">IG</a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon-block icon-in" title="LinkedIn">IN</a>
+                <a href="https://tiktok.com" target="_blank" class="social-icon-block icon-tt" title="TikTok">TT</a>
             </div>
 
-            <!-- 3. The Sprouting Plant -->
-            <div class="element-plant-container">
-                <div class="element-title-plant">The Sprouting Plant</div>
-                <div class="element-desc">Vibrant green plant growing from rich soil, fueled directly by social media streams.</div>
+            <!-- 3. Rich Soil & Vibrant Sprouting Plant -->
+            <div class="soil-and-plant">
+                <div class="soil-mound"></div>
+                <div class="plant-stem">
+                    <div class="leaf leaf-left"></div>
+                    <div class="leaf leaf-top"></div>
+                    <div class="leaf leaf-right"></div>
+                </div>
             </div>
 
         </div>
@@ -201,8 +251,9 @@
         <!-- Text and Branding Footer -->
         <div class="branding-footer">
             <div class="main-slogan">GROW WITH DIGITALIZATION</div>
-            <div class="portfolio-owner">Lemma Asefa Portfolio</div>
+            <div class="portfolio-owner">Qaroo Digital Agency</div>
         </div>
+
     </div>
 
 </body>

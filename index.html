@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qaroo Digital Agency | Lemma Asefa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            /* Background adii fi magariisa */
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #f8fafc 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 440px;
+            height: 100%;
+            max-height: 95vh;
+            /* MAQAA SUURAA KEE - Yoo my.jpg ta'uu baate maqaa isaa sirrii asitti jijjiiri */
+            background: url('my.jpg') no-repeat center center;
+            background-size: contain;
+            display: flex;
+            justify-content: center;
+        }
+
+        .brand-overlay {
+            position: absolute;
+            top: 3%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(22, 163, 74, 0.2);
+            border-radius: 14px;
+            padding: 10px 15px;
+            box-shadow: 0 10px 25px rgba(22, 163, 74, 0.15);
+        }
+
+        .brand-overlay h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #15803d;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        .brand-overlay p {
+            font-size: 0.8rem;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        /* Clickable Hotspots */
+        .social-link {
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+
+        .social-link:hover {
+            background-color: rgba(22, 163, 74, 0.25);
+            box-shadow: 0 0 15px rgba(22, 163, 74, 0.8);
+            border: 1px solid #16a34a;
+        }
+
+        /* Safartoota iconootaa (Coordinates) */
+        .fb { top: 25%; left: 33%; width: 9%; height: 9%; }
+        .ig { top: 26%; left: 42%; width: 9%; height: 9%; }
+        .twitter { top: 35%; left: 29%; width: 9%; height: 9%; }
+        .linkedin { top: 39%; left: 41%; width: 9%; height: 9%; }
+        .youtube { top: 46%; left: 26%; width: 9%; height: 9%; }
+        .pinterest { top: 48%; left: 42%; width: 9%; height: 9%; }
+        .whatsapp { top: 57%; left: 30%; width: 10%; height: 10%; }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="brand-overlay">
+            <h1>Qaroo Digital Agency</h1>
+            <p>Lemma Asefa &bull; Digital Creator</p>
+        </div>
+
+        <a href="https://facebook.com/USERNAMEEDHEE" target="_blank" class="social-link fb" title="Facebook"></a>
+        <a href="https://instagram.com/USERNAMEEDHEE" target="_blank" class="social-link ig" title="Instagram"></a>
+        <a href="https://twitter.com/USERNAMEEDHEE" target="_blank" class="social-link twitter" title="Twitter"></a>
+        <a href="https://linkedin.com/in/USERNAMEEDHEE" target="_blank" class="social-link linkedin" title="LinkedIn"></a>
+        <a href="https://youtube.com/@USERNAMEEDHEE" target="_blank" class="social-link youtube" title="YouTube"></a>
+        <a href="https://pinterest.com/USERNAMEEDHEE" target="_blank" class="social-link pinterest" title="Pinterest"></a>
+        <a href="https://wa.me/LAMOON_KEESSAN" target="_blank" class="social-link whatsapp" title="WhatsApp"></a>
+    </div>
+
+</body>
+</html>
